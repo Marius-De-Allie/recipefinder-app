@@ -19,6 +19,8 @@ const controlSearch = async () => {
         // 3. Prepare UI for results.
         searchView.clearInput();
         searchView.clearResults();
+        // Render loading spinner icon.
+        renderLoader(domElements.resultsElement);
         // 4 Search for recipes.
         await state.search.getResults(); //returns a promise
         //  5 render results to UI.

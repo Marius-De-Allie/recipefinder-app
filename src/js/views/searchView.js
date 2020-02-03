@@ -12,6 +12,22 @@ export const clearResults = () => {
     domElements.searchResultList.innerHTML = '';
 };
 
+const limitRecipeTitle = (title, limit = 17) => {
+    const newTitle = [];
+    if(title.length > limit) {
+        title.split(' ').reduce((acc, current) => {
+            if(acc + current.length <= limit) {
+                newTitle.push(current);
+            }
+            return acc + current.length;
+        }, 0);
+        // return result.
+        return `${newTitle.join(' ')} ...)`;
+    } else {
+        return title;
+    }
+};
+
 const renderRecipe = (recipe) => {
     const markup = `
     <li>

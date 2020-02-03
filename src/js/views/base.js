@@ -2,7 +2,8 @@
 const domElements = {
     searchInput: document.querySelector('.search__field'),
     searchForm: document.querySelector('.search'),
-    searchResultList: document.querySelector('.results__list')
+    searchResultList: document.querySelector('.results__list'),
+    resultsElement: document.querySecltor('.results')
 };
 
 const renderLoader = parent => {

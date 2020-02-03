@@ -16,4 +16,4 @@ const renderLoader = parent => {
     parent.insertAdjecentHTML('afterbegin', loader);
 };
 
-export {domElements};
+export {domElements, renderLoader};

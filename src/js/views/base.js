@@ -24,4 +24,4 @@ const clearLoader = () => {
     }
 };
 
-export {domElements, renderLoader};
+export {domElements, renderLoader, clearLoader};

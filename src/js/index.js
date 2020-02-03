@@ -2,7 +2,7 @@
 'use strict';
 // import search module
 import Search from './models/Search';
-import {domElements} from './views/base';
+import {domElements, renderLoader} from './views/base';
 import * as searchView from './views/searchView';
 
 // Global app state

@@ -59,11 +59,14 @@ const renderButtons = (page, numResults, resPerPage) => {
     if(page === 1 && pages > 1) {
         button = createButton(page, 'next');
     } else if(page < pages) {
-        `${createButton(page, 'prev')}
-         ${createButton(page, 'next')}`
+        button = `
+            ${createButton(page, 'prev')}
+            ${createButton(page, 'next')}
+        `;
     } else if(page === pages && pages > 1) {
         button = createButton(page, 'prev');
     }
+    domElements.resultsPages.insertAdjacentHTML('afterbegin', button);
 };
 
 export const renderResults = (recipes, page = 1, resPerPage = 10) => {

@@ -45,6 +45,17 @@ const renderRecipe = (recipe) => {
     domElements.searchResultList.insertAdjacentHTML('beforeend', markup);
 };
 
+const renderButtons = (page, numResults, resPerPage) => {
+    const pages = Math.ceil(numResults / resPerPage)
+    if(page === 1 && apages > 1) {
+
+    } else if(page < pages) {
+
+    } else if(page === pages && pages > 1) {
+
+    }
+};
+
 export const renderResults = (recipes, page = 1, resPerPage = 10) => {
     const start = (page - 1 ) * resPerPage;
     const end = page * resPerPage;

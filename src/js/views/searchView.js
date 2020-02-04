@@ -54,14 +54,15 @@ const createButton = (page, type) => `
     </button>
 `
 const renderButtons = (page, numResults, resPerPage) => {
-    const pages = Math.ceil(numResults / resPerPage)
+    const pages = Math.ceil(numResults / resPerPage);
+    let button;
     if(page === 1 && pages > 1) {
-        createButton(page, 'next');
+        button = createButton(page, 'next');
     } else if(page < pages) {
         `${createButton(page, 'prev')}
          ${createButton(page, 'next')}`
     } else if(page === pages && pages > 1) {
-        createButton(page, 'prev');
+        button = createButton(page, 'prev');
     }
 };
 

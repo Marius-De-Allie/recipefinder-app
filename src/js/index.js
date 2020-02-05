@@ -48,6 +48,25 @@ domElements.resultsPages.addEventListener('click', (e) => {
     };
 });
 
+const controlRecipe = async () => {
+    // Get id from url.
+    const id = window.location.hash.replace('#', '');
+    if(id) {
+        // Prepare UI for changes.
+
+        //Create new recipe object.
+        state.recipe = new Recipe(id);
+
+        // Get recipe data.
+        await state.recipe.getRecipe();
+        // Calculate time and servings.
+        state.recipe.calcServings
+        state.recipe.calcTime
+        // Render recipe.
+        console.log(state.recipe);
+
+    }
+}
 
 
 

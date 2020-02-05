@@ -8,7 +8,7 @@ import Recipe from './models/Recipe';
 
 // Global app state
 const state = {
-    
+
 };
 
 const controlSearch = async () => {
@@ -47,5 +47,7 @@ domElements.resultsPages.addEventListener('click', (e) => {
         searchView.renderResults(state.search.result, goToPage);
     };
 });
+
+
 
 

@@ -13,7 +13,7 @@ class Recipe {
             this.url = recipe.source_url;
             this.ingredients = recipe.ingredients;
         } catch(e) {
-            console.log(error);
+            console.log(e);
         }
     }
     // Method to calculate cooking time.

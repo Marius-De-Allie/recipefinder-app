@@ -1,3 +1,15 @@
+const createIngredient = ingredient => `
+    <li class="recipe__item">
+    <svg class="recipe__icon">
+        <use href="img/icons.svg#icon-check"></use>
+    </svg>
+    <div class="recipe__count">${ingredient.count}</div>
+    <div class="recipe__ingredient">
+        <span class="recipe__unit">${ingredient.unit}</span>
+        ${ingredient.ingredient}
+    </div>
+    </li>
+`;
 const renderRecipe = recipe => {
     const markup = `
     <figure class="recipe__fig">

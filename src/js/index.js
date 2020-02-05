@@ -58,7 +58,7 @@ const controlRecipe = async () => {
     const id = window.location.hash.replace('#', '');
     if(id) {
         // Prepare UI for changes.
-
+        renderLoader(domElements.recipe);
         //Create new recipe object.
         state.recipe = new Recipe(id);
 
@@ -71,7 +71,6 @@ const controlRecipe = async () => {
             state.recipe.calcTime();
             // Render recipe.
             recipeView.renderRecipe(state.recipe);
-            console.log(state.recipe);
         } catch(e) {
             console.log(e);
         }

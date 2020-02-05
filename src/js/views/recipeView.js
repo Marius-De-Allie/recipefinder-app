@@ -1,4 +1,9 @@
 import {domElements} from './base';
+
+export const clearRecipe = () => {
+    domElements.recipe.innerHTML = '';
+};
+
 const createIngredient = ingredient => `
     <li class="recipe__item">
     <svg class="recipe__icon">

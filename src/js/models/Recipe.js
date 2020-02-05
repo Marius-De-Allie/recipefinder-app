@@ -6,12 +6,12 @@ class Recipe {
     }
     async getRecipe() {
         try {
-            const {recipe} = await axios(`https://forkify-api.herokuapp.com/api/get?rId=${this.id}`);
-            this.title = recipt.title;
-            this.author = recipe.publisher;
-            this.image = recipe.image_url;
-            this.url = recipe.source_url;
-            this.ingredients = recipe.ingredients;
+            const res = await axios(`https://forkify-api.herokuapp.com/api/get?rId=${this.id}`);
+            this.title = res.data.recipe.title;
+            this.author = res.data.recipe.publisher;
+            this.image = res.data.recipe.image_url;
+            this.url = res.data.recipe.source_url;
+            this.ingredients = res.data.recipe.ingredients;
         } catch(e) {
             console.log(e);
         }

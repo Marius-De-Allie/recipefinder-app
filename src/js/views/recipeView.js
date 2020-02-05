@@ -1,3 +1,5 @@
+import {domElements} from './base';
+
 const createIngredient = ingredient => `
     <li class="recipe__item">
     <svg class="recipe__icon">

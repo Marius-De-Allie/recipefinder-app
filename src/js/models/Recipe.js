@@ -19,7 +19,7 @@ class Recipe {
     // Method to calculate cooking time.
     calcTime() {
         const numIngredients = this.ingredients.length;
-        const periods = Math.ceil(numIngredients / 3);
+        const period = Math.ceil(numIngredients / 3);
         this.time = period * 15;
     }
     calcServings() {

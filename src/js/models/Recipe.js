@@ -32,7 +32,7 @@ class Recipe {
             // Uniform units.
             let ingredient = el.toLowerCase();
             unitsLong.forEach((el, index) => {
-                ingredient = ingredient.replace(el, unitShort[index]);
+                ingredient = ingredient.replace(el, unitsShort[index]);
             });
 
             // Remove parenthesis.
@@ -40,26 +40,26 @@ class Recipe {
 
             // Parse ingreidents into count, unit and ingredient
             const ingArray = ingredient.split(' ');
-            const unitIndex = arrIng.findIndex(element => unitsShort.includes(element));
+            const unitIndex = ingArray.findIndex(element => unitsShort.includes(element));
             let objIng;
             if(unitIndex > -1) {
-                const arrayCount = arrIng.slice(0, unitIndex);
+                const arrayCount = ingArray.slice(0, unitIndex);
                 let count;
                 if(arrayCount.length === 1) {
-                    count = arraIng[0].replace('-', '+');
+                    count = ingArray[0].replace('-', '+');
                 } else {
-                    count = eval(arraIng.slice(0, unitIndex).join('+'));
+                    count = eval(ingArray.slice(0, unitIndex).join('+'));
                 }
                 objIng = {
                     count: count,
-                    unit: arrIng[unitIndex],
-                    ingredient: arrIng.slice(unitIndex + 1).join(' ')
+                    unit: ingArray[unitIndex],
+                    ingredient: ingArray.slice(unitIndex + 1).join(' ')
                 };
-            } else if (parseInt(arrIng[0], 10)) {
+            } else if (parseInt(ingArray[0], 10)) {
                 objIng = {
-                    count: parseInt(arrIng[0], 10),
+                    count: parseInt(ingArray[0], 10),
                     unit: '',
-                    ingredient: arrIng.slice(1).join(' ')
+                    ingredient: ingArray.slice(1).join(' ')
                 };
             } else if (unitIndex === -1) {
                 objIng = {

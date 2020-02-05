@@ -9,12 +9,18 @@ class Recipe {
             const {recipe} = await axios(`https://forkify-api.herokuapp.com/api/get?rId=${this.id}`);
             this.title = recipt.title;
             this.author = recipe.publisher;
-            this.image = recipe.ime_url;
+            this.image = recipe.image_url;
             this.url = recipe.source_url;
             this.ingredients = recipe.ingredients;
         } catch(e) {
             console.log(error);
         }
+    }
+    // Method to calculate cooking time.
+    calcTime() {
+        const numIngredients = this.ingredients.length;
+        const periods = Math.ceil(numIngredients / 3);
+        this.time = period * 15;
     }
 }
 

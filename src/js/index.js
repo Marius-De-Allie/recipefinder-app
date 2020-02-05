@@ -68,5 +68,6 @@ const controlRecipe = async () => {
     }
 }
 
+window.addEventListener('hashchange', controlRecipe);
 
 

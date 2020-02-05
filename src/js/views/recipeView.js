@@ -99,3 +99,5 @@ const renderRecipe = recipe => {
     `;
     domElements.recipe.insertAdjacentHTML('afterbegin', markup);
 };
+
+export default renderRecipe;

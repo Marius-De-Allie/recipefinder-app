@@ -6,7 +6,7 @@ class Recipe {
     }
     async getRecipe() {
         try {
-            const result = await axios(`https://forkify-api.herokuapp.com/api/get?rId=${this.id}`);
+            const {recipe} = await axios(`https://forkify-api.herokuapp.com/api/get?rId=${this.id}`);
         } catch(e) {
             console.log(error);
         }

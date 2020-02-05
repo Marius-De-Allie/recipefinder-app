@@ -58,16 +58,20 @@ const controlRecipe = async () => {
         state.recipe = new Recipe(id);
 
         // Get recipe data.
-        await state.recipe.getRecipe();
-        // Calculate time and servings.
-        state.recipe.calcServings();
-        state.recipe.calcTime();
-        // Render recipe.
-        console.log(state.recipe);
+        try {
+            await state.recipe.getRecipe();
+            // Calculate time and servings.
+            state.recipe.calcServings();
+            state.recipe.calcTime();
+            // Render recipe.
+            console.log(state.recipe);
+        } catch(e) {
+            console.log(e);
+        }
 
     }
 }
 
 window.addEventListener('hashchange', controlRecipe);
-
+window.addEventListener('load', controlRecipe);
 

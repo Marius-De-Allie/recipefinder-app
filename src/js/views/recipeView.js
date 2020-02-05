@@ -1,6 +1,6 @@
 import {domElements} from './base';
 
-const createIngredient = ingredient => `
+export const createIngredient = ingredient => `
     <li class="recipe__item">
     <svg class="recipe__icon">
         <use href="img/icons.svg#icon-check"></use>
@@ -100,4 +100,3 @@ const renderRecipe = recipe => {
     domElements.recipe.insertAdjacentHTML('afterbegin', markup);
 };
 
-export default renderRecipe;

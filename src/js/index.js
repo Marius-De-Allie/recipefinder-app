@@ -23,12 +23,16 @@ const controlSearch = async () => {
         searchView.clearResults();
         // Render loading spinner icon.
         renderLoader(domElements.resultsElement);
-        // 4 Search for recipes.
-        await state.search.getResults(); //returns a promise
-        //  5 render results to UI.
-        // console.log(state.search.result)
-        clearLoader();
-        searchView.renderResults(state.search.result);
+        try {
+            // 4 Search for recipes.
+            await state.search.getResults(); //returns a promise
+            //  5 render results to UI.
+            // console.log(state.search.result)
+            clearLoader();
+            searchView.renderResults(state.search.result);
+        } catch(e) {
+            clearLoader();
+        }
     }
 };
 
@@ -68,7 +72,6 @@ const controlRecipe = async () => {
         } catch(e) {
             console.log(e);
         }
-
     }
 }
 

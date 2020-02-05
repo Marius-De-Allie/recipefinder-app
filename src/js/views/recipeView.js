@@ -1,6 +1,5 @@
 import {domElements} from './base';
-
-export const createIngredient = ingredient => `
+const createIngredient = ingredient => `
     <li class="recipe__item">
     <svg class="recipe__icon">
         <use href="img/icons.svg#icon-check"></use>
@@ -12,7 +11,7 @@ export const createIngredient = ingredient => `
     </div>
     </li>
 `;
-const renderRecipe = recipe => {
+export const renderRecipe = recipe => {
     const markup = `
     <figure class="recipe__fig">
         <img src="${recipe.image}" alt="${recipe.title}" class="recipe__img">
@@ -61,7 +60,7 @@ const renderRecipe = recipe => {
 
     <div class="recipe__ingredients">
         <ul class="recipe__ingredient-list">
-        ${recipe.ingredients.map(ingredient => createIngredient(ingredient).join(''))}
+        ${recipe.ingredients.map(ingredient => createIngredient(ingredient)).join('')}
             <li class="recipe__item">
                 <svg class="recipe__icon">
                     <use href="img/icons.svg#icon-check"></use>

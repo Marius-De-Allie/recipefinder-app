@@ -70,6 +70,7 @@ const controlRecipe = async () => {
             state.recipe.calcServings();
             state.recipe.calcTime();
             // Render recipe.
+            clearLoader();
             recipeView.renderRecipe(state.recipe);
         } catch(e) {
             console.log(e);

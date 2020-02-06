@@ -11,6 +11,8 @@ class List {
             unit: unit,
             ingredients: ingredients
         }
+        this.items = [...this.items, item];
+        return item;
     }
     deleteItem(id) {
         const itemIndex = this.items.findIndex(item => item.id === id);

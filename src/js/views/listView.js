@@ -15,5 +15,5 @@ const renderItem = item => {
             </button>
         </li>
     `;
-
+    domElements.shoppingList.insertAdjacentHTML('beforeend', markup);
 };

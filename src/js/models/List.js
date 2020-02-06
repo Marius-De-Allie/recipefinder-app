@@ -14,9 +14,11 @@ class List {
     }
     deleteItem(id) {
         const itemIndex = this.items.findIndex(item => item.id === id);
-        this.items.splice(itemIndex ,1)
+        this.items.splice(itemIndex, 1);
     }
-
+    updateCount(id, newCount) {
+        this.items.find(item => item.id === id).count = newCount;
+    }
 }
 
 export default List; 

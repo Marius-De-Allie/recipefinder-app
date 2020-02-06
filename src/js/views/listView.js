@@ -17,3 +17,10 @@ const renderItem = item => {
     `;
     domElements.shoppingList.insertAdjacentHTML('beforeend', markup);
 };
+
+const deleteItem = id => {
+    const item = document.querySelector(`[data-itemid === "${id}"]`);
+    item.remove();
+};
+
+export {renderItem, deleteItem};

@@ -6,6 +6,7 @@ class List {
     }
     addItem(count, unit, ingredients) {
         const item = {
+            id: uniqid(),
             count: count,
             unit: unit,
             ingredients: ingredients

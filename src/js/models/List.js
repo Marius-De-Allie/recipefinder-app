@@ -12,6 +12,10 @@ class List {
             ingredients: ingredients
         }
     }
+    deleteItem(id) {
+        const itemIndex = this.items.findIndex(item => item.id === id);
+        this.items.splice(itemIndex ,1)
+    }
 
 }
 

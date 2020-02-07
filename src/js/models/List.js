@@ -4,12 +4,12 @@ class List {
     constructor() {
         this.items = [];
     }
-    addItem(count, unit, ingredients) {
+    addItem(count, unit, ingredient) {
         const item = {
             id: uniqid(),
             count: count,
             unit: unit,
-            ingredients: ingredients
+            ingredient: ingredient
         }
         this.items = [...this.items, item];
         return item;

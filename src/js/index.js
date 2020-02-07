@@ -97,7 +97,7 @@ domElements.recipe.addEventListener('click', evt => {
     } else if(evt.target.matches('.btn-increase, .btn-increase *')) {
         state.recipe.updateServings('inc');
         recipeView.updateServingsIngredients(state.recipe)
-    } else if(evt.target.matches('.recipe__btn--add, recipe__btn--add *')) {
+    } else if(evt.target.matches('.recipe__btn--add, .recipe__btn--add *')) {
         controlList();
     }
 });

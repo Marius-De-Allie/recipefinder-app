@@ -93,6 +93,9 @@ domElements.shoppingList.addEventListener('click', evt => {
     if(evt.target.matches('.shopping__delete, .shopping__delete *')) {
         state.list.deleteItem(id);
         listView.deleteItem(id);
+    } else if(evt.target.matches('.shopping__count-value')) {
+        const val = parseFloat(evt.target.value, 10);
+        state.list.updateCount(id, val);
     }
 });
 

@@ -5,6 +5,7 @@ import Search from './models/Search';
 import {domElements, renderLoader, clearLoader} from './views/base';
 import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
+import * as listView from './views/listView';
 import Recipe from './models/Recipe';
 import List from './models/List';
 
@@ -101,3 +102,14 @@ domElements.recipe.addEventListener('click', evt => {
     }
 });
 
+/* LIST CONTROLLER */
+const controlList = () => {
+    if(!state.list) {
+        state.list = new List();
+    }
+    state.recipe.ingredients.forEach(ing => {
+        const item = state.list.addItem(ing.count, ing.unit, ing.ingredient);
+        listView.renderItem(item);
+    })
+
+};

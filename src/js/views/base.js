@@ -6,7 +6,7 @@ const domElements = {
     resultsElement: document.querySelector('.results'),
     resultsPages: document.querySelector('.results__pages'),
     recipe: document.querySelector('.recipe'),
-    shoppingList: document.querySelectorAll('.shopping__list')
+    shoppingList: document.querySelector('.shopping__list')
 };
 
 const renderLoader = parent => {

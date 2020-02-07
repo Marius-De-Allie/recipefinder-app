@@ -87,6 +87,15 @@ const controlRecipe = async () => {
 
 window.addEventListener('hashchange', controlRecipe);
 window.addEventListener('load', controlRecipe);
+
+domElements.shoppingList.addEventListener('click', evt => {
+    const id = evt.target.closest('.shopping__item').dataset.itemid;
+    if(evt.target.matches('.shopping__delete, .shopping__delete *')) {
+        state.list.deleteItem(id);
+        listView.deleteItem(id);
+    }
+});
+
 // Handling recipe button clicks.
 domElements.recipe.addEventListener('click', evt => {
     if(evt.target.matches('.btn-decrease, .btn-decrease *')) {

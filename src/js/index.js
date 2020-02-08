@@ -128,7 +128,7 @@ domElements.recipe.addEventListener('click', evt => {
         recipeView.updateServingsIngredients(state.recipe)
     } else if(evt.target.matches('.recipe__btn--add, .recipe__btn--add *')) {
         controlList();
-    } else if(evt.target.macthes('.recipe__love, .recipe__love *')) {
+    } else if(evt.target.matches('.recipe__love, .recipe__love *')) {
         // Like controller
         controlLike();
     }

@@ -5,6 +5,7 @@ import Search from './models/Search';
 import {domElements, renderLoader, clearLoader} from './views/base';
 import * as searchView from './views/searchView';
 import * as recipeView from './views/recipeView';
+import * as likesView from './views/likesView';
 import * as listView from './views/listView';
 import Recipe from './models/Recipe';
 import List from './models/List';

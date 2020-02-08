@@ -108,6 +108,7 @@ const controlLike = () => {
         if(!state.likes.isLiked(currentId)) {
             const like = state.likes.addLike(currentId, state.recipe.title, state.recipe.author, state.recipe.image);
             likesView.toggleLike(true);
+            likesView.renderLike(like)
         } else {
             state.likes.deleteLike(currentId);
             likesView.toggleLike(false);

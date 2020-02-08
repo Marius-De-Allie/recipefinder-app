@@ -30,4 +30,11 @@ const renderLike = like => {
     domElements.likesList.insertAdjacentHTML('beforeend', markup);
 }
 
+const deleteLike = id => {
+    const el = document.querySelector(`.likes__link[href*="${id}"]`).parentElement;
+    if(el) {
+        el.remove();
+    }
+};
+
 export {toggleLike, toggleLikeMenu, renderLike};

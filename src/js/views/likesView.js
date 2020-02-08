@@ -37,4 +37,4 @@ const deleteLike = id => {
     }
 };
 
-export {toggleLike, toggleLikeMenu, renderLike};
+export {toggleLike, toggleLikeMenu, renderLike, deleteLike};

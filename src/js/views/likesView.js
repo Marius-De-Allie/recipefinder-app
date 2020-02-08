@@ -27,7 +27,7 @@ const renderLike = like => {
             </a>
         </li>
     `;
-    domElements.likesList.insertAdjacentHTML('afterbegin', markup);
+    domElements.likesList.insertAdjacentHTML('beforeend', markup);
 }
 
-export {toggleLike, toggleLikeMenu};
+export {toggleLike, toggleLikeMenu, renderLike};

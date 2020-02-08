@@ -8,6 +8,7 @@ import * as recipeView from './views/recipeView';
 import * as listView from './views/listView';
 import Recipe from './models/Recipe';
 import List from './models/List';
+import Likes from './models/Likes';
 
 // Global app state
 const state = {
@@ -99,6 +100,20 @@ domElements.shoppingList.addEventListener('click', evt => {
     }
 });
 
+/* LIKE CONTROLLER */
+const controlLike = () => {
+    if(!state.likes) {
+        state.likes = new Likes();
+        const currentId = state.recipe.id;
+        if(!state.likes.isLiked(currentId)) {
+            const like = state.likes.addLike(currentId, state.recipe.title, state.recipe.author, state.recipe.image);
+            
+        } else {
+
+        }
+    }
+};
+
 // Handling recipe button clicks.
 domElements.recipe.addEventListener('click', evt => {
     if(evt.target.matches('.btn-decrease, .btn-decrease *')) {
@@ -111,6 +126,9 @@ domElements.recipe.addEventListener('click', evt => {
         recipeView.updateServingsIngredients(state.recipe)
     } else if(evt.target.matches('.recipe__btn--add, .recipe__btn--add *')) {
         controlList();
+    } else if(evt.target.macthes('.recipe__love, .recipe__love *')) {
+        // Like controller
+        controlLike();
     }
 });
 

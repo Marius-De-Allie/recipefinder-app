@@ -113,6 +113,7 @@ const controlLike = () => {
             likesView.toggleLike(false);
         }
     }
+    likesView.toggleLikeMenu(state.likes.getNumberLikes());
 };
 
 // Handling recipe button clicks.

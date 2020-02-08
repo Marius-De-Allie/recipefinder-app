@@ -109,6 +109,7 @@ const controlLike = () => {
             const like = state.likes.addLike(currentId, state.recipe.title, state.recipe.author, state.recipe.image);
             
         } else {
+            state.likes.deleteLike(currentId);
 
         }
     }

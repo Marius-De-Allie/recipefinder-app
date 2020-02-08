@@ -6,7 +6,8 @@ const domElements = {
     resultsElement: document.querySelector('.results'),
     resultsPages: document.querySelector('.results__pages'),
     recipe: document.querySelector('.recipe'),
-    shoppingList: document.querySelector('.shopping__list')
+    shoppingList: document.querySelector('.shopping__list'),
+    likesMenu: document.querySelector('.likes__field')
 };
 
 const renderLoader = parent => {

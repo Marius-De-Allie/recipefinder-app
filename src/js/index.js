@@ -80,7 +80,7 @@ const controlRecipe = async () => {
             state.recipe.calcTime();
             // Render recipe.
             clearLoader();
-            recipeView.renderRecipe(state.recipe);
+            recipeView.renderRecipe(state.recipe, state.recipe.isLiked(id));
         } catch(e) {
             console.log(e);
         }

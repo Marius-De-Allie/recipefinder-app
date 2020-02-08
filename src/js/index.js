@@ -80,7 +80,7 @@ const controlRecipe = async () => {
             state.recipe.calcTime();
             // Render recipe.
             clearLoader();
-            recipeView.renderRecipe(state.recipe, state.recipe.isLiked(id));
+            recipeView.renderRecipe(state.recipe, state.likes.isLiked(id));
         } catch(e) {
             console.log(e);
         }
@@ -100,7 +100,6 @@ domElements.shoppingList.addEventListener('click', evt => {
         state.list.updateCount(id, val);
     }
 });
-
 /* LIKE CONTROLLER */
 const controlLike = () => {
     if(!state.likes) {

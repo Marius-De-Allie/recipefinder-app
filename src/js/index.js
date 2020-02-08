@@ -112,6 +112,7 @@ const controlLike = () => {
         } else {
             state.likes.deleteLike(currentId);
             likesView.toggleLike(false);
+            likesView.deleteLike(currentId);
         }
     }
     likesView.toggleLikeMenu(state.likes.getNumberLikes());

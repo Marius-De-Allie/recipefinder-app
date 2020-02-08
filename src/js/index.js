@@ -108,10 +108,10 @@ const controlLike = () => {
         const currentId = state.recipe.id;
         if(!state.likes.isLiked(currentId)) {
             const like = state.likes.addLike(currentId, state.recipe.title, state.recipe.author, state.recipe.image);
-            
+            likesView.toggleLike(true);
         } else {
             state.likes.deleteLike(currentId);
-
+            likesView.toggleLike(false);
         }
     }
 };

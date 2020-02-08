@@ -13,4 +13,4 @@ const toggleLikeMenu = numLikes => {
     }
 };
 
-export {toggleLike};
+export {toggleLike, toggleLikeMenu};

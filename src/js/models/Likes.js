@@ -3,3 +3,5 @@ class Likes {
         this.likes = [];
     }
 }
+
+export default Likes;

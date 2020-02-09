@@ -23,6 +23,9 @@ class Likes {
     getNumberLikes() {
         return this.likes.length;
     }
+    persistData() {
+        localStorage.setItem('likes', JSON.stringify(this.likes));
+    }
 }
 
 export default Likes;
